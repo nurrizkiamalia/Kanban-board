@@ -43,7 +43,7 @@ const Card: React.FC<{ card: CardData, onValueNameChange: (newValue: string) => 
             ) : (
                 <div className="w-full min-w-[268px]">
                     <p className="card-content flex flex-col gap-2 bg-white shadow-md rounded-lg p-4 w-full items-start cursor-grabbing justify-centertext-center">Nothing to be done 😊</p>
-                    <img src="src/assets/thisIsFine.png" alt="No tasks" className="mx-auto mt-5"/>
+                    <img src="assets/thisIsFine.png" alt="No tasks" className="mx-auto mt-5"/>
                 </div>
             )}
         </div>
@@ -85,7 +85,7 @@ const TagList: React.FC<{ tags: string[] }> = ({ tags }) => {
 
 const ImageSingle: React.FC <{ image: string }> = ({ image }) => {
     return(
-        <img className=' object-cover w-fit rounded-full ' src={`src/assets/${image}`} alt={`Assignee Image`} />
+        <img className=' object-cover w-fit rounded-full ' src={`assets/${image}`} alt={`Assignee Image`} />
     )
 }
 
@@ -104,7 +104,7 @@ const Task: React.FC <{ task: string }> = ({ task }) => {
 
     return (
         <div onClick={() => setDone(!done)} className='flex gap-3 items-center justify-start cursor-pointer '>
-        <img src={done === false ? "src/assets/Unchecked.png" : "src/assets/Checked.png"} />
+        <img src={done === false ? "assets/Unchecked.png" : "assets/Checked.png"} />
         <span  className={`${done ? "line-through decoration-double" : ""} text-task text-darkGrey text-label `}>{task}</span>
         </div>
         
